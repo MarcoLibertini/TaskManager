@@ -1,0 +1,61 @@
+ Entorno virtual
+backend/nVenv/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Archivos de entorno
+.env
+
+.venv/
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de base de datos
+*.sqlite3
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+
+# Si tienes un frontend, puedes descomentar estas líneas cuando las necesites:
+# node_modules/
+# /build
+# .env.local
+# .env.development.local
+# .env.test.local
+# .env.production.local
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
+
+
+# Python
+      __pycache__/
+      *.pyc
+      *.pyo
+      *.pyd
+      .Python
+      env/
+      venv/
+      .env
+
+      # Node
+      node_modules/
+      npm-debug.log
+      yarn-error.log
+
+      # Otros
+      .DS_Store
