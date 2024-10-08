@@ -33,7 +33,7 @@ export function TaskCard({ task }) {
                     }}
                 >
                     {/* El texto del botón cambia según el estado de la tarea */}
-                    {taskCompleted ? 'Completada' : 'Pendiente'}
+                    {taskCompleted ? 'Completed' : 'Pending'}
                 </button>
             </div>
         </div>

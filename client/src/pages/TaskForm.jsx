@@ -62,7 +62,7 @@ function TaskForm() {
 
 
     return (
-        <div className="flex justify-center items-center h-screen">
+        <div className="justify-center max-w-md mx-auto">
             <form className="bg-zinc-800 p-10 rounded-lg" onSubmit={handleSubmit}>
                 <h1 className="text-center text-2xl font-bold text-white mb-5">
                     {params.id ? 'Update Task' : 'Create Task'}
