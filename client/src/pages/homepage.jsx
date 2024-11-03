@@ -10,7 +10,7 @@ function Homepage() {
         // Definimos una función asíncrona para obtener las tareas
         async function fetchTasks() {
             // Hacemos una petición GET a nuestra API
-            const response = await axios.get('http://localhost:8000/api/tasks/')
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/tasks/`)
             // Imprimimos los datos de la respuesta en la consola
             // Actualizamos el estado 'tasks' con los datos recibidos de la API
             setTasks(response.data)

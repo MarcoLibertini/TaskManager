@@ -20,7 +20,7 @@ function TaskForm() {
         try {
             if(!params.id) {
                 // Hacemos una petición POST a la API para crear una nueva tarea
-                const response = await axios.post('http://localhost:8000/api/tasks/', { 
+                const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/tasks/`, { 
                     title, 
                     description 
                 })
@@ -28,7 +28,7 @@ function TaskForm() {
                 navigate('/')
             } else {
                // Hacemos una petición put a la API para actualizar una tarea
-                const response = await axios.put(`http://localhost:8000/api/tasks/${params.id}`, { 
+                const response = await axios.put(`${process.env.REACT_APP_API_URL}/api/tasks/${params.id}`, { 
                     title, 
                     description 
                 })
@@ -48,7 +48,7 @@ function TaskForm() {
         async function fetchTask() {
             if (params.id && params.id !== 'undefined') {
                 try {
-                    const response = await axios.get(`http://localhost:8000/api/tasks/${params.id}`)
+                    const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/tasks/${params.id}`)
                     setTitle(response.data.title)
                     setDescription(response.data.description)
                 } catch (error) {
@@ -100,7 +100,7 @@ function TaskForm() {
                         onClick={async () => {
                             try {
                                 // Intenta eliminar la tarea usando el ID proporcionado en los parámetros
-                                const response = await axios.delete(`http://localhost:8000/api/tasks/${params.id}`)
+                                const response = await axios.delete(`${process.env.REACT_APP_API_URL}/api/tasks/${params.id}`)
                                 // Si la eliminación es exitosa, navega a la página principal
                                 navigate('/')
                             } catch (error) {
