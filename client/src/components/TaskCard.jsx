@@ -20,7 +20,7 @@ export function TaskCard({ task }) {
                     onClick={async () => {
                         try {
                             // Se hace una petición PUT a la API para actualizar el estado de la tarea
-                            const updatedTask = await axios.put(`${process.env.REACT_APP_API_URL}/api/tasks/${task._id}`, {
+                            const updatedTask = await axios.put(`${import.meta.env.VITE_API_URL}/api/tasks/${task._id}`, {
                                 ...task, // Se mantienen todas las propiedades existentes de la tarea
                                 completed: !taskCompleted // Se invierte el estado de completado
                             });

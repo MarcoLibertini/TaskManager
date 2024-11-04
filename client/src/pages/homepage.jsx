@@ -10,8 +10,8 @@ function Homepage() {
         // Definimos una función asíncrona para obtener las tareas
         async function fetchTasks() {
             // Hacemos una petición GET a nuestra API
-            console.log("API URL PROBANDO:", process.env.REACT_APP_API_URL);
-            const response = await axios.get(`https://taskmanager-pzo4.onrender.com/api/tasks/`)
+            console.log("API URL PROBANDO:", import.meta.env.REACT_APP_API_URL);
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/tasks/`)
             console.log(response)
             // Imprimimos los datos de la respuesta en la consola
             // Actualizamos el estado 'tasks' con los datos recibidos de la API
